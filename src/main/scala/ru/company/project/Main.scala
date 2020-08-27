@@ -25,7 +25,7 @@ object Main {
   }
 
   def copyToLocal(file: Path): Unit = {
-    val localFile = Paths.get(".", file.toString().substring(1));
+    val localFile = Paths.get(".", file.toString.substring(1));
     Files.createDirectories(localFile.getParent());
     Files.copy(file, localFile);
   }
